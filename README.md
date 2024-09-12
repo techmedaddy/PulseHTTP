@@ -8,7 +8,6 @@ PulseHTTP is a comprehensive Node.js application designed to provide a robust so
 
 The project structure follows best practices, ensuring that the code is modular and easy to maintain. It includes middleware for authentication and error handling, controllers for managing business logic, and utility functions to support token generation and other tasks. Additionally, the application is fully Dockerized, making it simple to deploy in various environments.
 
-**Note:** This project is still being worked on, and additional features and improvements are expected to be added in the future.
 
 ## Project Structure
 
