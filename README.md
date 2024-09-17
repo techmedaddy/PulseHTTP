@@ -7,14 +7,6 @@ PulseHTTP is a scalable, token-based authentication and role-based authorization
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Running the Application](#running-the-application)
-- [API Endpoints](#api-endpoints)
-- [Environment Variables](#environment-variables)
-- [Dockerization](#dockerization)
-- [Testing](#testing)
-- [Security Considerations](#security-considerations)
-- [License](#license)
 
 ## Project Overview
 
@@ -63,3 +55,4 @@ PulseHTTP/
 ├── Dockerfile          # Dockerfile for containerization
 ├── docker-compose.yml  # Docker Compose configuration
 └── package.json        # Project metadata and dependencies
+
