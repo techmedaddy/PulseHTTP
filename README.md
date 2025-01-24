@@ -1,41 +1,58 @@
 # PulseHTTP
 
-**PulseHTTP** is a scalable, token-based authentication and role-based authorization Node.js application built with Express and MongoDB. The application is designed to handle user management, including registration, login, and secured routes, with a focus on security, error handling, and best practices in a production environment. The project is Dockerized for easy deployment and is structured following industry standards.
+PulseHTTP is a scalable, token-based authentication and role-based authorization Node.js application built with Express and MongoDB. The project is designed for user management (registration, login) with a strong focus on security, error handling, and industry best practices. PulseHTTP is fully Dockerized for easy deployment and structured to meet production-level standards.
 
-## Project Description
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
 
-PulseHTTP is a comprehensive Node.js application designed to provide a robust solution for user management with a focus on security and scalability. The application utilizes Express for building the backend, MongoDB for database management, and JSON Web Tokens (JWT) for token-based authentication. It includes features such as user registration, login, and role-based authorization to control access to various resources.
+## Project Overview
 
-The project structure follows best practices, ensuring that the code is modular and easy to maintain. It includes middleware for authentication and error handling, controllers for managing business logic, and utility functions to support token generation and other tasks. Additionally, the application is fully Dockerized, making it simple to deploy in various environments.
+PulseHTTP is a backend application built to handle user management efficiently. It uses **token-based authentication (JWT)** to secure API endpoints and **role-based authorization** to control access. This ensures that users can only access resources they are authorized for.
 
-**Note:** This project is still being worked on, and additional features and improvements are expected to be added in the future.
+The project focuses on:
+- Security
+- Scalability
+- Modular architecture
+- Production-ready features
+
+## Features
+- **User Registration and Login**: Handles secure user registration and login with encrypted passwords.
+- **Token-Based Authentication**: Uses JSON Web Tokens (JWT) for session management.
+- **Role-Based Authorization**: Implements roles (e.g., admin, user) to control access to different API routes.
+- **Middleware Integration**: For authentication, authorization, and error handling.
+- **Secure Routes**: Routes protected using authentication middleware.
+- **Dockerized**: Fully Dockerized for simple and consistent deployment.
+
+## Technologies Used
+- **Node.js**: Backend runtime
+- **Express.js**: Web framework for Node.js
+- **MongoDB**: NoSQL database
+- **Mongoose**: MongoDB object modeling for Node.js
+- **JSON Web Token (JWT)**: Token-based authentication
+- **Docker**: Containerization of the app for easy deployment
+- **bcrypt.js**: Password encryption
+- **Jest**: Testing framework
+- **dotenv**: Environment variable management
 
 ## Project Structure
 
-```plaintext
+```bash
 PulseHTTP/
-│
 ├── src/
-│   ├── config/
-│   │   └── db.js          # MongoDB connection setup
-│   ├── controllers/
-│   │   ├── authController.js  # Handles authentication logic
-│   │   └── userController.js  # Handles user-related logic
-│   ├── middleware/
-│   │   ├── authMiddleware.js  # Token verification middleware
-│   │   └── errorHandler.js    # Centralized error handling middleware
-│   ├── models/
-│   │   └── User.js            # Mongoose user schema and model
-│   ├── routes/
-│   │   ├── authRoutes.js      # Routes for authentication (login, register)
-│   │   └── userRoutes.js      # Routes for user-related operations
-│   ├── utils/
-│   │   └── generateToken.js   # Utility function to generate JWT tokens
-│   └── server.js              # Main server file
-│
-├── .env.example               # Example environment variables file
-├── .gitignore                 # Files and directories to ignore in Git
-├── Dockerfile                 # Dockerfile for containerizing the app
-├── docker-compose.yml         # Docker Compose configuration
-├── package.json               # NPM dependencies and scripts
-└── README.md                  # Project documentation
+│   ├── config/         # Configuration files (e.g., database setup)
+│   ├── controllers/    # Business logic (e.g., user registration, login)
+│   ├── middleware/     # Authentication, error handling
+│   ├── models/         # Mongoose models (e.g., User)
+│   ├── routes/         # Route definitions
+│   ├── utils/          # Utility functions (e.g., token generation)
+│   └── server.js       # Entry point to the application
+├── tests/              # Unit and integration tests
+├── .env                # Environment variables file
+├── .gitignore          # Git ignore file
+├── Dockerfile          # Dockerfile for containerization
+├── docker-compose.yml  # Docker Compose configuration
+└── package.json        # Project metadata and dependencies
+
